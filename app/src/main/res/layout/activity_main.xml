@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:id="@+id/rg"
         >
         <RadioButton
             android:text="首页"
@@ -25,6 +26,7 @@
             android:id="@+id/home"
             android:button="@null"
             android:gravity="center"
+            android:drawableTop="@drawable/select_c"
             />
         <RadioButton
             android:text="专题"
@@ -34,6 +36,7 @@
             android:id="@+id/special"
             android:button="@null"
             android:gravity="center"
+            android:drawableTop="@drawable/select_d"
 
             />
         <RadioButton
@@ -44,6 +47,7 @@
             android:id="@+id/sort"
             android:button="@null"
             android:gravity="center"
+            android:drawableTop="@drawable/select_b"
             />
         <RadioButton
             android:text="购物车"
@@ -53,6 +57,7 @@
             android:id="@+id/cart"
             android:button="@null"
             android:gravity="center"
+            android:drawableTop="@drawable/select_e"
             />
         <RadioButton
             android:text="我的"
@@ -62,6 +67,7 @@
             android:id="@+id/my"
             android:button="@null"
             android:gravity="center"
+            android:drawableTop="@drawable/select_a"
             />
     </RadioGroup>
 </LinearLayout>
