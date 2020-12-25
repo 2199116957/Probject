@@ -22,35 +22,46 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/show"
+            android:id="@+id/home"
+            android:button="@null"
+            android:gravity="center"
             />
         <RadioButton
             android:text="专题"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/show"
+            android:id="@+id/special"
+            android:button="@null"
+            android:gravity="center"
+
             />
         <RadioButton
             android:text="分类"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/show"
+            android:id="@+id/sort"
+            android:button="@null"
+            android:gravity="center"
             />
         <RadioButton
             android:text="购物车"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/show"
+            android:id="@+id/cart"
+            android:button="@null"
+            android:gravity="center"
             />
         <RadioButton
             android:text="我的"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:id="@+id/show"
+            android:id="@+id/my"
+            android:button="@null"
+            android:gravity="center"
             />
     </RadioGroup>
 </LinearLayout>
