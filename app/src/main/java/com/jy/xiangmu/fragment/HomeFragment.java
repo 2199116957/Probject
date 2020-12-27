@@ -164,7 +164,7 @@ public class HomeFragment extends Fragment {
 
         linearLayoutHelper1.setItemCount(layLinBeans.size());// 设置布局里Item个数
         linearLayoutHelper1.setPadding(10,10,10,10);// 设置LayoutHelper的子元素相对LayoutHelper边缘的距离
-        linearLayoutHelper1.setMargin(0,0,0,10);// 设置LayoutHelper边缘相对父控件（即RecyclerView）的距离
+        linearLayoutHelper1.setMargin(0,0,0,30);// 设置LayoutHelper边缘相对父控件（即RecyclerView）的距离
         linearLayoutHelper1.setBgColor(Color.WHITE);// 设置背景颜色
         linearLayoutHelper1.setAspectRatio(3);// 设置设置布局内每行布局的宽与高的比
         // linearLayoutHelper特有属性
@@ -172,6 +172,14 @@ public class HomeFragment extends Fragment {
         LayLinAdapter layLinAdapter = new LayLinAdapter(linearLayoutHelper1,getActivity(), layLinBeans);
 
         /***************************************************************************/
+
+        TitleAdap titleAdap3 = new TitleAdap(singleLayoutHelper1,getActivity());
+        titleAdap3.setName("标题精选");
+
+        /***************************************************************************/
+            
+
+        /*-------------------------------------------------------------------------*/
         DelegateAdapter delegateAdapter = new DelegateAdapter(virtualLayoutManager, true);
         delegateAdapter.addAdapter(soAdap);
         delegateAdapter.addAdapter(bannerAdap);
@@ -182,6 +190,7 @@ public class HomeFragment extends Fragment {
         delegateAdapter.addAdapter(zhiZaoAdap1);
         delegateAdapter.addAdapter(titleAdap2);
         delegateAdapter.addAdapter(layLinAdapter);
+        delegateAdapter.addAdapter(titleAdap3);
         mRecy.setAdapter(delegateAdapter);
     }
 }
