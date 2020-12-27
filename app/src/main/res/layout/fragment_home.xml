@@ -4,32 +4,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F4F4F4"
     tools:context=".fragment.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginRight="22dp"
-        android:background="@drawable/shape_home_search"
-        android:gravity="center">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_baseline_search_24" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="商品搜索,共239款好物" />
-    </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/recy"
+
         />
+    <!--
+    <com.youth.banner.Banner
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/banner_home"
+        />-->
 </LinearLayout>
