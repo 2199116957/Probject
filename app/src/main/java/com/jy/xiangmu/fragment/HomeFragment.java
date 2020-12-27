@@ -15,6 +15,7 @@ import com.alibaba.android.vlayout.layout.ColumnLayoutHelper;
 import com.alibaba.android.vlayout.layout.GridLayoutHelper;
 import com.alibaba.android.vlayout.layout.LinearLayoutHelper;
 import com.alibaba.android.vlayout.layout.SingleLayoutHelper;
+import com.jy.xiangmu.Bean.HomeBean;
 import com.jy.xiangmu.R;
 import com.jy.xiangmu.adap.BannerAdap;
 import com.jy.xiangmu.adap.DaoHangAdap;
@@ -177,7 +178,18 @@ public class HomeFragment extends Fragment {
         titleAdap3.setName("标题精选");
 
         /***************************************************************************/
-            
+        ArrayList<TopBean> topBeans = new ArrayList<>();
+        topBeans.add(new TopBean("关爱他成长的每一个足迹","https://yanxuan.nosdn.127.net/14943267735961674.jpg","专业运动品牌同厂，毛毛虫鞋买二送一"));
+        topBeans.add(new TopBean("一次解决5个节日送礼难题","https://yanxuan.nosdn.127.net/14942996754171334.jpg","这些就是他们想要的礼物清单"));
+        topBeans.add(new TopBean("秒杀化学洗涤剂的纯天然皂","https://yanxuan.nosdn.127.net/14943267735961674.jpg","专业运动品牌同厂，毛毛虫鞋买二送一"));
+        SingleLayoutHelper singleLayoutHelper3 = new SingleLayoutHelper();// 公共属性
+        singleLayoutHelper3.setItemCount(1);// 设置布局里Item个数
+        singleLayoutHelper3.setBgColor(Color.WHITE);// 设置背景颜色
+        singleLayoutHelper3.setPadding(10,10,10,10);// 设置LayoutHelper的子元素相对LayoutHelper边缘的距离
+        singleLayoutHelper3.setMargin(0,0,0,30);// 设置LayoutHelper边缘相对父控件（即RecyclerView）的距离
+        singleLayoutHelper3.setAspectRatio(1-5);// 设置设置布局内每行布局的宽与高的比
+        RecyAdapter recyAdapter = new RecyAdapter(singleLayoutHelper3,getActivity(), topBeans);
+
 
         /*-------------------------------------------------------------------------*/
         DelegateAdapter delegateAdapter = new DelegateAdapter(virtualLayoutManager, true);
@@ -191,6 +203,7 @@ public class HomeFragment extends Fragment {
         delegateAdapter.addAdapter(titleAdap2);
         delegateAdapter.addAdapter(layLinAdapter);
         delegateAdapter.addAdapter(titleAdap3);
+        delegateAdapter.addAdapter(recyAdapter);
         mRecy.setAdapter(delegateAdapter);
     }
 }
