@@ -1,4 +1,4 @@
-package com.jy.xiangmu.fragment;
+package com.jy.xiangmu.adap;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,10 +16,11 @@ import com.alibaba.android.vlayout.LayoutHelper;
 import com.alibaba.android.vlayout.layout.GridLayoutHelper;
 import com.bumptech.glide.Glide;
 import com.jy.xiangmu.R;
+import com.jy.xiangmu.fragment.ZhiZaoBean;
 
 import java.util.ArrayList;
 
-class ZhiZaoAdap1 extends DelegateAdapter.Adapter {
+public class ZhiZaoAdap1 extends DelegateAdapter.Adapter {
     private GridLayoutHelper gridLayoutHelper;
     private Context context;
     private ArrayList<ZhiZaoBean> list;
@@ -62,12 +63,11 @@ class ZhiZaoAdap1 extends DelegateAdapter.Adapter {
         private final TextView name;
         private final TextView title;
         private final ImageView image;
-
         public ViewHolder(View view) {
             super(view);
-            name = view.findViewById(R.id.name);
-            title = view.findViewById(R.id.title);
-            image = view.findViewById(R.id.image);
+            name = view.findViewById(R.id.grid_d_name);
+            title = view.findViewById(R.id.grid_d_title);
+            image = view.findViewById(R.id.grid_d_image);
         }
     }
 }

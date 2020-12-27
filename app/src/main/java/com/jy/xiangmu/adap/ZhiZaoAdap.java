@@ -1,4 +1,4 @@
-package com.jy.xiangmu.fragment;
+package com.jy.xiangmu.adap;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,10 +15,11 @@ import com.alibaba.android.vlayout.LayoutHelper;
 import com.alibaba.android.vlayout.layout.GridLayoutHelper;
 import com.bumptech.glide.Glide;
 import com.jy.xiangmu.R;
+import com.jy.xiangmu.fragment.ZhiZaoBean;
 
 import java.util.ArrayList;
 
-class ZhiZaoAdap extends DelegateAdapter.Adapter {
+public class ZhiZaoAdap extends DelegateAdapter.Adapter {
     private GridLayoutHelper gridLayoutHelper;
     private Context context;
     private ArrayList<ZhiZaoBean> list;

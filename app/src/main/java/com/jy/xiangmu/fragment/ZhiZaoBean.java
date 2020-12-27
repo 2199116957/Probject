@@ -1,6 +1,6 @@
 package com.jy.xiangmu.fragment;
 
-class ZhiZaoBean {
+public class ZhiZaoBean {
     private int Image;
     private String title;
     private String title2;
