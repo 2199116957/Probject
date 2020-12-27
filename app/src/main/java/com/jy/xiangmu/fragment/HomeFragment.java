@@ -92,43 +92,81 @@ public class HomeFragment extends Fragment {
 
         /**------------------------------------------------------------------------*/
         SingleLayoutHelper singleLayoutHelper1 = new SingleLayoutHelper();
-        columnLayoutHelper.setItemCount(1);// 设置布局里Item个数
-        columnLayoutHelper.setBgColor(Color.WHITE);// 设置背景颜色
-        columnLayoutHelper.setAspectRatio(6);// 设置设置布局内每行布局的宽与高的比
+        singleLayoutHelper1.setItemCount(1);// 设置布局里Item个数
+        singleLayoutHelper1.setBgColor(Color.WHITE);// 设置背景颜色
+        singleLayoutHelper1.setAspectRatio(6);// 设置设置布局内每行布局的宽与高的比
         TitleAdap titleAdap = new TitleAdap(singleLayoutHelper,getActivity());
         titleAdap.setName("品牌制造商直供");
         /**------------------------------------------------------------------------*/
         /**
          设置Grid布局
          */
-        GridLayoutHelper gridLayoutHelper = new GridLayoutHelper(3);
+        GridLayoutHelper gridLayoutHelper = new GridLayoutHelper(4);
         // 在构造函数设置每行的网格个数
 
-        // 公共属性
-        gridLayoutHelper.setItemCount(4);// 设置布局里Item个数
-        gridLayoutHelper.setPadding(0, 0, 20, 20);// 设置LayoutHelper的子元素相对LayoutHelper边缘的距离
-        gridLayoutHelper.setMargin(20, 20, 20, 20);// 设置LayoutHelper边缘相对父控件（即RecyclerView）的距离
-        gridLayoutHelper.setBgColor(Color.WHITE);// 设置背景颜色
-        gridLayoutHelper.setAspectRatio(6);// 设置设置布局内每行布局的宽与高的比
+        ArrayList<ZhiZaoBean> zhiZaoBeans = new ArrayList<>();
+        zhiZaoBeans.add(new ZhiZaoBean(R.drawable.zzs1,"CK制造商","39元起"));
+        zhiZaoBeans.add(new ZhiZaoBean(R.drawable.zzs2,"MUJI制造商","12.9元起"));
+        zhiZaoBeans.add(new ZhiZaoBean(R.drawable.zzx3,"WMF制造商","9.9元起"));
+        zhiZaoBeans.add(new ZhiZaoBean(R.drawable.zzx4,"Coach制造商","49元起"));
+        gridLayoutHelper.setItemCount(zhiZaoBeans.size());
+        gridLayoutHelper.setPadding(5,5,5,0); //设置layouthelper的子元素对layouthelper边缘的距离
+        gridLayoutHelper.setBgColor(Color.WHITE);//设置背景颜色
+        gridLayoutHelper.setAspectRatio(3); //设置布局内每行布局的宽高比
 
-        // gridLayoutHelper特有属性（下面会详细说明）
-        gridLayoutHelper.setWeights(new float[]{40, 30, 30});//设置每行中 每个网格宽度 占 每行总宽度 的比例
-        gridLayoutHelper.setVGap(20);// 控制子元素之间的垂直间距
-        gridLayoutHelper.setHGap(20);// 控制子元素之间的水平间距
+        //gridlayouthelper特有属性
+        gridLayoutHelper.setWeights(new float[]{50, 50});//设置每行中 每个网格宽度 占 每行总宽度 的比例
+        gridLayoutHelper.setVGap(2);// 控制子元素之间的垂直间距
+        gridLayoutHelper.setHGap(2);// 控制子元素之间的水平间距
         gridLayoutHelper.setAutoExpand(false);//是否自动填充空白区域
-        gridLayoutHelper.setSpanCount(3);// 设置每行多少个网格
+        gridLayoutHelper.setSpanCount(2);// 设置每行多少个网格
+        ZhiZaoAdap zhizaoAdap = new ZhiZaoAdap(gridLayoutHelper,getActivity(),zhiZaoBeans);
 
+        /**------------------------------------------------------------------------*/
+        SingleLayoutHelper singleLayoutHelper2 = new SingleLayoutHelper();
+        singleLayoutHelper2.setItemCount(1);// 设置布局里Item个数
+        singleLayoutHelper2.setBgColor(Color.WHITE);// 设置背景颜色
+        singleLayoutHelper2.setAspectRatio(6);// 设置设置布局内每行布局的宽与高的比
+        TitleAdap titleAdap1 = new TitleAdap(singleLayoutHelper2,getActivity());
+        titleAdap1.setName("周一周四.新品发布");
+        /**------------------------------------------------------------------------*/
+        /*GridLayoutHelper gridLayoutHelper1 = new GridLayoutHelper(2);
+        // 在构造函数设置每行的网格个数
 
+        ArrayList<ZhiZaoBean> zhiZaoBeans1 = new ArrayList<>();
 
+        zhiZaoBeans1.add(new ZhiZaoBean(R.drawable.zzs1,"CK制造商","39元起"));
+        zhiZaoBeans1.add(new ZhiZaoBean(R.drawable.zzs2,"MUJI制造商","12.9元起"));
+        zhiZaoBeans1.add(new ZhiZaoBean(R.drawable.zzx3,"WMF制造商","9.9元起"));
+        zhiZaoBeans1.add(new ZhiZaoBean(R.drawable.zzx4,"Coach制造商","49元起"));
+        gridLayoutHelper.setItemCount(zhiZaoBeans.size());
+        gridLayoutHelper.setPadding(5,5,5,0); //设置layouthelper的子元素对layouthelper边缘的距离
+        gridLayoutHelper.setBgColor(Color.WHITE);//设置背景颜色
+        gridLayoutHelper.setAspectRatio(3); //设置布局内每行布局的宽高比
 
-
-
+        //gridlayouthelper特有属性
+        gridLayoutHelper.setWeights(new float[]{50, 50});//设置每行中 每个网格宽度 占 每行总宽度 的比例
+        gridLayoutHelper.setVGap(2);// 控制子元素之间的垂直间距
+        gridLayoutHelper.setHGap(2);// 控制子元素之间的水平间距
+        gridLayoutHelper.setAutoExpand(false);//是否自动填充空白区域
+        gridLayoutHelper.setSpanCount(2);// 设置每行多少个网格
+        ZhiZaoAdap1 zhizaoAdap1 = new ZhiZaoAdap1(gridLayoutHelper,getActivity(),zhiZaoBeans1);*/
+        GridLayoutHelper gridLayoutHelper1 = new GridLayoutHelper(2);
+        ArrayList<ZhiZaoBean> zhiZaoBeans1 = new ArrayList<>();
+        zhiZaoBeans1.add(new ZhiZaoBean(R.drawable.zzs1,"CK制造商","39元起"));
+//        http://yanxuan.nosdn.127.net/767b370d07f3973500db54900bcbd2a7.png
+//        http://yanxuan.nosdn.127.net/6c03ca93d8fe404faa266ea86f3f1e43.png
+//        http://yanxuan.nosdn.127.net/aa49dfe878becf768eddc4c1636643a6.png
+//        http://yanxuan.nosdn.127.net/8b30eeb17c831eba08b97bdcb4c46a8e.png
         /**------------------------------------------------------------------------*/
         DelegateAdapter delegateAdapter = new DelegateAdapter(virtualLayoutManager, true);
         delegateAdapter.addAdapter(soAdap);
         delegateAdapter.addAdapter(bannerAdap);
         delegateAdapter.addAdapter(daoHangAdap);
         delegateAdapter.addAdapter(titleAdap);
+        delegateAdapter.addAdapter(zhizaoAdap);
+        delegateAdapter.addAdapter(titleAdap1);
+//        delegateAdapter.addAdapter(zhizaoAdap1);
         mRecy.setAdapter(delegateAdapter);
     }
 }
