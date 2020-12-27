@@ -1,4 +1,4 @@
-package com.jy.xiangmu.fragment;
+package com.jy.xiangmu.adap;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,12 +16,13 @@ import com.alibaba.android.vlayout.LayoutHelper;
 import com.alibaba.android.vlayout.layout.ColumnLayoutHelper;
 import com.bumptech.glide.Glide;
 import com.jy.xiangmu.R;
+import com.jy.xiangmu.fragment.DaoHangBean;
 
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-class DaoHangAdap extends DelegateAdapter.Adapter {
+public class DaoHangAdap extends DelegateAdapter.Adapter {
     private ColumnLayoutHelper columnLayoutHelper;
     private Context context;
     private ArrayList<DaoHangBean> list;

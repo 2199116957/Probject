@@ -1,6 +1,6 @@
 package com.jy.xiangmu.fragment;
 
-class BannerBean {
+public class BannerBean {
     private Integer image;
 
     public BannerBean(Integer image) {

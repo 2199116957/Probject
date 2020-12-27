@@ -1,4 +1,4 @@
-package com.jy.xiangmu.fragment;
+package com.jy.xiangmu.adap;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,7 +15,7 @@ import com.alibaba.android.vlayout.layout.SingleLayoutHelper;
 import com.jy.xiangmu.R;
 import com.youth.banner.Banner;
 
-class SoAdap extends DelegateAdapter.Adapter {
+public class SoAdap extends DelegateAdapter.Adapter {
     private SingleLayoutHelper singleLayoutHelper;
     private Context context;
 

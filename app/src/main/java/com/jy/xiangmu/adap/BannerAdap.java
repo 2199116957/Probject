@@ -1,4 +1,4 @@
-package com.jy.xiangmu.fragment;
+package com.jy.xiangmu.adap;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -14,12 +14,13 @@ import com.alibaba.android.vlayout.LayoutHelper;
 import com.alibaba.android.vlayout.layout.LinearLayoutHelper;
 import com.bumptech.glide.Glide;
 import com.jy.xiangmu.R;
+import com.jy.xiangmu.fragment.BannerBean;
 import com.youth.banner.Banner;
 import com.youth.banner.loader.ImageLoader;
 
 import java.util.ArrayList;
 
-class BannerAdap extends DelegateAdapter.Adapter {
+public class BannerAdap extends DelegateAdapter.Adapter {
     private LinearLayoutHelper linearLayoutHelper;
     private Context context;
     private ArrayList<BannerBean> images;

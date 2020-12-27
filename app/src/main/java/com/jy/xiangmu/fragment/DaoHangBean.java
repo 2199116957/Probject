@@ -1,19 +1,19 @@
 package com.jy.xiangmu.fragment;
 
-class DaoHangBean {
-    private String Images;
+public class DaoHangBean {
+    private int Images;
     private String desc;
 
-    public DaoHangBean(String images, String desc) {
+    public DaoHangBean(int images, String desc) {
         Images = images;
         this.desc = desc;
     }
 
-    public String getImages() {
+    public int getImages() {
         return Images;
     }
 
-    public void setImages(String images) {
+    public void setImages(int images) {
         Images = images;
     }
 
